@@ -2,13 +2,16 @@
 
 #### Update:
 
-The docker-compose file adds
- volumes:
-   - /opt/apache-flask:/var/www/apache-flask
-Before starting the container the following must be copied to /opt/apache-flask:
- apache-flask.wsgi
- run.py
- app folder
+The docker-compose file adds a volume so that the Flask app is placed on the host volume.
+ 
+   /opt/apache-flask:/var/www/apache-flask
+
+
+Before starting the container the following must be copied to /opt/apache-flask.
+
+ - apache-flask.wsgi
+ - run.py
+ - app/ folder
 
 This is the repo for running a python app under `mod_wsgi` on apache in a docker container
 
