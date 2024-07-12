@@ -1,5 +1,15 @@
 # Debian - Python - Mod_Wsgi
 
+#### Update:
+
+The docker-compose file adds
+ volumes:
+   - /opt/apache-flask:/var/www/apache-flask
+Before starting the container the following must be copied to /opt/apache-flask:
+ apache-flask.wsgi
+ run.py
+ app folder
+
 This is the repo for running a python app under `mod_wsgi` on apache in a docker container
 
 Many of the docker repo's out there use flask local server in their images.
