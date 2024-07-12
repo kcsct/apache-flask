@@ -5,7 +5,7 @@ services:
         ports:
         - "8088:80"
         volumes:
-          - ./apache-flask:/var/www/apache-flask
+          - /opt/apache-flask:/var/www/apache-flask
         restart: always
         container_name: apache-flask
 
